@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>บ้านเดี่ยว ปภาวรินท์ กาญจนาฯ-บางใหญ่ | ประวัติการพัฒนาโครงการ</title>
+  
+  <!-- Favicon from main site -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts: Noto Sans Thai (main website font) & Alex Brush for script accent -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind.config.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#FAF8F2] text-[#231F20] min-h-screen flex flex-col selection:bg-[#404E3F] selection:text-white">
+
+  <!-- ================= TOP NAVIGATION BAR (MATCHING MAIN SITE) ================= -->
+  <header class="bg-[#F9F2E0] fixed top-0 left-0 w-full z-50 shadow-[0_4px_4px_rgba(0,0,0,0.25)] nav-shadow">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Logo from Main Site -->
+        <div class="flex-shrink-0">
+          <a href="https://pabhawarinhome.com/" class="block">
+            <img src="assets/6.2 1.png" alt="บ้านเดี่ยว ปภาวรินท์ กาญจนาฯ-บางใหญ่" class="h-16 w-auto md:h-18">
+          </a>
+        </div>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden md:flex space-x-7 lg:space-x-8 xl:space-x-10 font-medium text-[#231F20] text-[20px] lg:text-[22px] xl:text-[24px] items-center">
+          <a href="https://pabhawarinhome.com/" class="hover:text-[#231F20] hover:underline underline-offset-4 transition">หน้าแรก</a>
+          <a href="#journey" class="font-77-bdcond font-bold text-[#231F20] underline underline-offset-4 transition">ประวัติโครงการ</a>
+          <a href="https://pabhawarinhome.com/#about" class="hover:text-[#231F20] hover:underline underline-offset-4 transition">ข้อมูลโครงการ</a>
+          <a href="https://pabhawarinhome.com/#house-models" class="hover:text-[#231F20] hover:underline underline-offset-4 transition">แบบบ้าน</a>
+          <a href="https://pabhawarinhome.com/#news" class="hover:text-[#231F20] hover:underline underline-offset-4 transition">ข่าวสารและกิจกรรม</a>
+          <a href="https://pabhawarinhome.com/#location" class="hover:text-[#231F20] hover:underline underline-offset-4 transition">ทำเลที่ตั้ง</a>
+        </nav>
+
+        <!-- Desktop Action Buttons -->
+        <div class="hidden md:flex items-center space-x-5">
+          <!-- Phone Button -->
+          <button onclick="openPhonePopup()" class="hidden md:block focus:outline-none cursor-pointer" title="ติดต่อโครงการ">
+            <img src="assets/hphone.png" alt="phone" class="w-10 h-10 hover:opacity-80 transition">
+          </button>
+
+          <!-- LINE Button -->
+          <a href="https://line.me/R/ti/p/@544wdfkf?ts=12201711&oat_content=url" target="_blank" rel="noopener noreferrer" class="inline-block" title="LINE Official">
+            <img src="assets/hline.png" alt="LINE" class="w-10 h-10 hover:opacity-80 transition">
+          </a>
+
+          <!-- Register Button -->
+          <a href="https://pabhawarinhome.com/#register" class="bg-[#404E3F] text-[#F9F2E0] font-77-bdcond font-bold px-6 py-2 rounded-lg hover:bg-[#5c6a5b] transition text-[24px] lg:text-[26px] xl:text-[28px] leading-none flex items-center justify-center">
+            ลงทะเบียน
+          </a>
+        </div>
+  
+        <!-- Mobile Hamburger Button -->
+        <button id="menu-btn" class="md:hidden relative z-50 text-gray-800 focus:outline-none" aria-label="เปิดเมนู">
+          <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-300 ease-in-out bg-[#F9F2E0] border-t border-gray-300">
+      <nav class="flex flex-col space-y-4 p-4 text-[#231F20] font-medium text-[20px]">
+        <a href="https://pabhawarinhome.com/" class="hover:text-[#231F20] hover:underline underline-offset-4 transition">หน้าแรก</a>
+        <a href="#journey" class="font-77-bdcond font-bold text-[#231F20] underline underline-offset-4 transition">ประวัติโครงการ</a>
+        <a href="https://pabhawarinhome.com/#about" class="hover:text-[#231F20] hover:underline underline-offset-4 transition">ข้อมูลโครงการ</a>
+        <a href="https://pabhawarinhome.com/#house-models" class="hover:text-[#231F20] hover:underline underline-offset-4 transition">แบบบ้าน</a>
+        <a href="https://pabhawarinhome.com/#news" class="hover:text-[#231F20] hover:underline underline-offset-4 transition">ข่าวสารและกิจกรรม</a>
+        <a href="https://pabhawarinhome.com/#location" class="hover:text-[#231F20] hover:underline underline-offset-4 transition">ทำเลที่ตั้ง</a>
+
+        <div class="flex items-center space-x-3 pt-3 border-t border-gray-300">
+          <a href="tel:0987654321" class="inline-block md:hidden">
+            <img src="assets/hphone.png" alt="phone" class="w-10 h-10 hover:opacity-80 transition">
+          </a>
+
+          <a href="https://line.me/R/ti/p/@544wdfkf?ts=12201711&oat_content=url" target="_blank" rel="noopener noreferrer" class="inline-block">
+            <img src="assets/hline.png" alt="LINE" class="w-10 h-10 hover:opacity-80 transition">
+          </a>
+
+          <a href="https://pabhawarinhome.com/#register" class="bg-[#404E3F] text-[#F9F2E0] font-77-bdcond font-bold px-4 py-2 rounded-lg hover:bg-[#5c6a5b] transition text-[20px]">
+            ลงทะเบียน
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Phone Popup Modal (Matching Main Site) -->
+    <div id="phone-popup" class="hidden fixed bottom-0 left-0 w-full bg-white shadow-xl border-t border-gray-300 px-6 py-4 md:py-6 z-[9999]">
+      <div class="max-w-3xl w-full mx-auto flex items-center justify-between bg-white p-4">
+        <div class="flex items-center space-x-3">
+          <h3 class="text-lg font-semibold text-gray-800">ติดต่อโครงการ:</h3>
+          <a href="tel:0987654321" class="text-lg text-gray-700 hover:text-[#404E3F] font-medium">098-765-4321</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="tel:0987654321" class="bg-[#404E3F] text-[#F9F2E0] px-4 py-2 rounded-lg hover:bg-[#5c6a5b] transition font-medium">
+            โทรเลย
+          </a>
+          <button onclick="closePhonePopup()" class="text-gray-600 hover:text-gray-800 text-xl leading-none font-bold p-1 cursor-pointer">
+            ✕
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Offset height for fixed navbar -->
+  <div class="h-20"></div>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="home" class="relative w-full overflow-hidden bg-neutral-900">
+    <div class="relative w-full aspect-[1920/710] max-w-[1920px] mx-auto">
+      <img src="Source/1.png" alt="บ้านเดี่ยว ปภาวรินท์ กาญจนาฯ-บางใหญ่ | ประวัติการพัฒนาโครงการ พื้นที่...ที่มากกว่าบ้าน จากจุดเริ่มต้นสู่การพัฒนาที่อยู่อาศัยเพื่อคุณภาพชีวิตที่ดีกว่า" class="w-full h-full object-cover object-center">
+      <h1 class="sr-only">ประวัติการพัฒนาโครงการ - บ้านเดี่ยว ปภาวรินท์ กาญจนาฯ-บางใหญ่</h1>
+    </div>
+  </section>
+
+  <!-- ================= SECTION: OUR JOURNEY ================= -->
+  <section id="journey" class="relative bg-[#EEE7D6] py-8 lg:py-10 xl:py-0 overflow-hidden w-full xl:h-[300px]">
+    
+    <div class="absolute left-0 top-0 bottom-0 w-[120px] md:w-[150px] lg:w-[165px] 2xl:w-[180px] h-full pointer-events-none select-none z-0">
+      <img src="assets/journey-leaves-left.png?v=2" alt="" class="w-full h-full object-cover object-left" aria-hidden="true">
+    </div>
+    <div class="absolute right-0 top-0 bottom-0 w-[120px] md:w-[150px] lg:w-[165px] 2xl:w-[185px] h-full pointer-events-none select-none z-0">
+      <img src="assets/journey-leaves-right.png?v=2" alt="" class="w-full h-full object-cover object-right" aria-hidden="true">
+    </div>
+
+    <div class="relative z-10 w-full max-w-[1920px] mx-auto h-full px-6 sm:px-10 md:px-14 xl:px-[150px] xl:pt-[30px] xl:pb-[30px]">
+      <div class="flex flex-col xl:flex-row items-center justify-between h-full gap-8 xl:gap-10">
+        
+        <div class="w-full xl:w-[420px] 2xl:w-[450px] flex-shrink-0 mb-8 xl:mb-0">
+          <span class="font-helvethaica text-[20px] lg:text-[22px] xl:text-[24px] font-medium tracking-[0.15em] text-[#5A6D56] uppercase block mb-1.5 lg:mb-[8px] leading-none">
+            OUR JOURNEY
+          </span>
+          <h2 class="font-77-bdcond font-bold text-[38px] sm:text-[44px] lg:text-[48px] 2xl:text-[52px] text-[#404E3F] leading-none mb-3 lg:mb-[16px] whitespace-nowrap">
+            เส้นทางการพัฒนาของเรา
+          </h2>
+          <p class="font-helvethaica text-[20px] sm:text-[23px] lg:text-[25px] 2xl:text-[27px] text-[#231F20] leading-[1.35] lg:leading-[35px] 2xl:leading-[38px] font-normal">
+            <span class="block whitespace-nowrap">เรามุ่งมั่นพัฒนาโครงการที่อยู่อาศัยคุณภาพ</span>
+            <span class="block whitespace-nowrap">ภายใต้แนวคิดการอยู่อาศัยที่สมดุลกับธรรมชาติ</span>
+            <span class="block whitespace-nowrap">และตอบโจทย์ทุกช่วงชีวิต</span>
+          </p>
+        </div>
+
+        <div class="w-full flex-1 grid grid-cols-1 md:grid-cols-3 xl:h-full items-stretch">
+          
+          <div class="py-4 xl:py-0 xl:pt-[10px] xl:pb-[6px] px-3 xl:px-4 flex flex-col items-center justify-center text-center">
+            <div class="w-18 h-18 xl:w-[84px] xl:h-[84px] mb-2 xl:mb-[8px] flex items-center justify-center flex-shrink-0">
+              <img src="assets/icon-quality-hd.png" alt="คุณภาพเป็นมาตรฐาน" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-77-bdcond font-bold text-[#231F20] text-[24px] sm:text-[27px] xl:text-[30px] leading-none mb-1.5 xl:mb-[8px] whitespace-nowrap">
+              คุณภาพเป็นมาตรฐาน
+            </h3>
+            <p class="font-helvethaica text-[#4A5548] text-[20px] sm:text-[22px] 2xl:text-[25px] leading-[25px] xl:leading-[28px]">
+              <span class="block whitespace-nowrap">คัดสรรวัสดุและกระบวนการ</span>
+              <span class="block whitespace-nowrap">ก่อสร้างที่ได้มาตรฐาน</span>
+            </p>
+          </div>
+
+          <div class="py-4 xl:py-0 xl:pt-[10px] xl:pb-[6px] px-3 xl:px-4 flex flex-col items-center justify-center text-center border-t md:border-t-0 md:border-l border-[#D6CEBC]">
+            <div class="w-18 h-18 xl:w-[84px] xl:h-[84px] mb-2 xl:mb-[8px] flex items-center justify-center flex-shrink-0">
+              <img src="assets/icon-eco-hd.png" alt="ใส่ใจสิ่งแวดล้อม" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-77-bdcond font-bold text-[#231F20] text-[24px] sm:text-[27px] xl:text-[30px] leading-none mb-1.5 xl:mb-[8px] whitespace-nowrap">
+              ใส่ใจสิ่งแวดล้อม
+            </h3>
+            <p class="font-helvethaica text-[#4A5548] text-[20px] sm:text-[22px] 2xl:text-[25px] leading-[25px] xl:leading-[28px]">
+              <span class="block whitespace-nowrap">พัฒนาโครงการที่เป็นมิตร</span>
+              <span class="block whitespace-nowrap">กับธรรมชาติ</span>
+            </p>
+          </div>
+
+          <div class="py-4 xl:py-0 xl:pt-[10px] xl:pb-[6px] px-3 xl:px-4 flex flex-col items-center justify-center text-center border-t md:border-t-0 md:border-l border-[#D6CEBC]">
+            <div class="w-18 h-18 xl:w-[84px] xl:h-[84px] mb-2 xl:mb-[8px] flex items-center justify-center flex-shrink-0">
+              <img src="assets/icon-living-hd.png" alt="เพื่อคุณภาพชีวิตที่ดีขึ้น" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-77-bdcond font-bold text-[#231F20] text-[24px] sm:text-[27px] xl:text-[30px] leading-none mb-1.5 xl:mb-[8px] whitespace-nowrap">
+              เพื่อคุณภาพชีวิตที่ดีขึ้น
+            </h3>
+            <p class="font-helvethaica text-[#4A5548] text-[20px] sm:text-[22px] 2xl:text-[25px] leading-[25px] xl:leading-[28px]">
+              <span class="block whitespace-nowrap">สร้างชุมชนที่อยู่อาศัย</span>
+              <span class="block whitespace-nowrap">อย่างยั่งยืน</span>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION: OUR PROJECT (WITH OVERLAPPING CARDS) ================= -->
+  <section id="projects" class="relative bg-[#EEE7D6] overflow-hidden">
+    
+    <!-- Dark Tree Canopy Header Banner -->
+    <div class="relative w-full bg-[#11190E] pt-14 pb-44 px-6 sm:px-12 lg:px-20 overflow-hidden">
+      <!-- Background Tree Image with dark blend overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src="assets/project-tree-clean.jpg" alt="OUR PROJECT background" class="w-full h-full object-cover object-top opacity-75">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0E150B]/60 via-[#131D10]/70 to-[#162112]/90"></div>
+      </div>
+
+    <!-- Header Text & Carousel Controls -->
+      <div class="relative z-10 max-w-[1600px] mx-auto text-left flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+        <div>
+          <span class="text-xs sm:text-sm font-semibold tracking-[0.2em] text-[#9CB597] uppercase block mb-1">
+            OUR PROJECT
+          </span>
+          <h2 class="text-3xl sm:text-4xl xl:text-5xl font-bold text-white tracking-wide mb-2">
+            โครงการทั้งหมด
+          </h2>
+          <p class="text-base sm:text-lg text-neutral-300 font-light">
+            บ้านเพื่อชีวิตที่สมดุล ในทุกช่วงเวลา
+          </p>
+        </div>
+
+        <!-- Next / Prev Carousel Buttons & Page Indicator -->
+        <div class="flex items-center gap-3">
+          <div class="text-right mr-1">
+            <span id="carousel-indicator-text" class="text-xs sm:text-sm text-neutral-300 font-medium tracking-wide block">
+              1 / 2
+            </span>
+            <span id="carousel-subtext" class="text-[11px] text-[#9CB597] block">
+              โครงการ 1 - 4
+            </span>
+          </div>
+          
+          <!-- Prev Button (<) -->
+          <button id="carousel-prev-btn" onclick="prevProjectSlide()" 
+                  class="w-12 h-12 rounded-full border border-white/20 bg-white/10 hover:bg-white/25 active:scale-95 transition-all flex items-center justify-center text-white disabled:opacity-30 disabled:pointer-events-none cursor-pointer shadow-sm"
+                  aria-label="ย้อนกลับ" disabled title="ย้อนกลับ">
+            <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <!-- Next Button (>) -->
+          <button id="carousel-next-btn" onclick="nextProjectSlide()" 
+                  class="w-12 h-12 rounded-full bg-[#404E3F] hover:bg-[#5c6a5b] text-[#F9F2E0] active:scale-95 transition-all flex items-center justify-center cursor-pointer shadow-lg hover:shadow-xl"
+                  aria-label="ถัดไป" title="ดูอีก 4 โครงการ">
+            <svg class="w-5 h-5 fill-none stroke-current" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards Carousel: 4 Cards per Slide overlapping banner -->
+    <div class="relative z-20 max-w-[1600px] mx-auto px-6 sm:px-12 lg:px-20 -mt-36 pb-20">
+      
+      <!-- Track Overflow Wrapper -->
+      <div class="overflow-hidden p-2.5 -m-2.5">
+        <div id="project-carousel-track" class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0%);">
+          
+          <!-- ================= SLIDE 1: Projects 1 - 4 ================= -->
+          <div class="w-full shrink-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 xl:gap-7">
+            
+            <!-- Card 1: โครงการสบาย ปภาวรินทร์ -->
+            <div class="project-card bg-white rounded-2xl p-3 pb-6 flex flex-col justify-between">
+              <div>
+                <div class="rounded-xl overflow-hidden aspect-[4/3] bg-neutral-100 shadow-inner">
+                  <img src="Source/project-sabai.png" alt="โครงการสบาย ปภาวรินทร์" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="px-2 pt-3.5">
+                  <div class="flex flex-wrap gap-1.5 mb-2.5">
+                    <span class="inline-block bg-[#EAF5EB] text-[#2E7D32] text-xs font-medium px-3 py-0.5 rounded-full">
+                      บ้านเดี่ยว
+                    </span>
+                  </div>
+
+                  <h4 class="text-[17px] sm:text-[18px] font-bold text-[#1F1F1F] mb-2.5 tracking-tight whitespace-nowrap">
+                    โครงการสบาย ปภาวรินทร์
+                  </h4>
+
+                  <div class="space-y-1.5 text-[13px] sm:text-sm text-[#444444]">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                      <span>นครปฐม</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                      </svg>
+                      <span>82 ยูนิต</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-2 pt-3.5 mt-3.5 border-t border-neutral-100 text-xs sm:text-[13px] text-[#737373] leading-relaxed">
+                โครงการบ้านจัดสรรที่พัฒนาแล้วเสร็จ<br>และส่งมอบให้ลูกบ้านเรียบร้อยแล้ว
+              </div>
+            </div>
+
+            <!-- Card 2: โครงการปภาวรินทร์ The Nature -->
+            <div class="project-card bg-white rounded-2xl p-3 pb-6 flex flex-col justify-between">
+              <div>
+                <div class="rounded-xl overflow-hidden aspect-[4/3] bg-neutral-100 shadow-inner">
+                  <img src="Source/project-nature.png" alt="โครงการปภาวรินทร์ The Nature" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="px-2 pt-3.5">
+                  <div class="flex flex-wrap gap-1.5 mb-2.5">
+                    <span class="inline-block bg-[#EAF5EB] text-[#2E7D32] text-xs font-medium px-3 py-0.5 rounded-full">
+                      บ้านเดี่ยว
+                    </span>
+                    <span class="inline-block bg-[#EAF5EB] text-[#2E7D32] text-xs font-medium px-3 py-0.5 rounded-full">
+                      บ้านแฝด
+                    </span>
+                  </div>
+
+                  <h4 class="text-[17px] sm:text-[18px] font-bold text-[#1F1F1F] mb-2.5 tracking-tight whitespace-nowrap">
+                    โครงการปภาวรินทร์ The Nature
+                  </h4>
+
+                  <div class="space-y-1.5 text-[13px] sm:text-sm text-[#444444]">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                      <span>นครปฐม</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                      </svg>
+                      <span class="text-xs sm:text-[13px] whitespace-nowrap">บ้านเดี่ยว 33 ยูนิต, บ้านแฝด 62 ยูนิต</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-2 pt-3.5 mt-3.5 border-t border-neutral-100 text-xs sm:text-[13px] text-[#737373] leading-relaxed">
+                โครงการบ้านจัดสรรที่พัฒนาแล้วเสร็จ<br>และส่งมอบให้ลูกบ้านเรียบร้อยแล้ว
+              </div>
+            </div>
+
+            <!-- Card 3: โครงการปภาวรินทร์ The Greenery -->
+            <div class="project-card bg-white rounded-2xl p-3 pb-6 flex flex-col justify-between">
+              <div>
+                <div class="rounded-xl overflow-hidden aspect-[4/3] bg-neutral-100 shadow-inner">
+                  <img src="Source/project-greenery.webp" alt="โครงการปภาวรินทร์ The Greenery" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="px-2 pt-3.5">
+                  <div class="flex flex-wrap gap-1.5 mb-2.5">
+                    <span class="inline-block bg-[#EAF5EB] text-[#2E7D32] text-xs font-medium px-3 py-0.5 rounded-full">
+                      บ้านเดี่ยว
+                    </span>
+                  </div>
+
+                  <h4 class="text-[17px] sm:text-[18px] font-bold text-[#1F1F1F] mb-2.5 tracking-tight whitespace-nowrap">
+                    โครงการปภาวรินทร์ The Greenery
+                  </h4>
+
+                  <div class="space-y-1.5 text-[13px] sm:text-sm text-[#444444]">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                      <span>นครปฐม</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                      </svg>
+                      <span>71 ยูนิต</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-2 pt-3.5 mt-3.5 border-t border-neutral-100 text-xs sm:text-[13px] text-[#737373] leading-relaxed">
+                โครงการบ้านจัดสรรที่พัฒนาแล้วเสร็จ<br>และส่งมอบให้ลูกบ้านเรียบร้อยแล้ว
+              </div>
+            </div>
+
+            <!-- Card 4: โครงการปภาวรินทร์ The Seven -->
+            <div class="project-card bg-white rounded-2xl p-3 pb-6 flex flex-col justify-between">
+              <div>
+                <div class="rounded-xl overflow-hidden aspect-[4/3] bg-neutral-100 shadow-inner">
+                  <img src="Source/project-seven.jpg" alt="โครงการปภาวรินทร์ The Seven" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="px-2 pt-3.5">
+                  <div class="flex flex-wrap gap-1.5 mb-2.5">
+                    <span class="inline-block bg-[#EAF5EB] text-[#2E7D32] text-xs font-medium px-3 py-0.5 rounded-full">
+                      บ้านเดี่ยว
+                    </span>
+                  </div>
+
+                  <h4 class="text-[17px] sm:text-[18px] font-bold text-[#1F1F1F] mb-2.5 tracking-tight whitespace-nowrap">
+                    โครงการปภาวรินทร์ The Seven
+                  </h4>
+
+                  <div class="space-y-1.5 text-[13px] sm:text-sm text-[#444444]">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                      <span>นครปฐม</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                      </svg>
+                      <span>93 ยูนิต</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-2 pt-3.5 mt-3.5 border-t border-neutral-100 text-xs sm:text-[13px] text-[#737373] leading-relaxed">
+                โครงการบ้านจัดสรรที่พัฒนาแล้วเสร็จ<br>และส่งมอบให้ลูกบ้านเรียบร้อยแล้ว
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ================= SLIDE 2: Projects 5 - 8 ================= -->
+          <div class="w-full shrink-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 xl:gap-7">
+            
+            <!-- Card 5: โครงการบ้านสวนปภาวรินทร์ -->
+            <div class="project-card bg-white rounded-2xl p-3 pb-6 flex flex-col justify-between">
+              <div>
+                <div class="rounded-xl overflow-hidden aspect-[4/3] bg-neutral-100 shadow-inner">
+                  <img src="Source/project-baansuan.png" alt="โครงการบ้านสวนปภาวรินทร์" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="px-2 pt-3.5">
+                  <div class="flex flex-wrap gap-1.5 mb-2.5">
+                    <span class="inline-block bg-[#EAF5EB] text-[#2E7D32] text-xs font-medium px-3 py-0.5 rounded-full">
+                      บ้านเดี่ยว
+                    </span>
+                  </div>
+
+                  <h4 class="text-[17px] sm:text-[18px] font-bold text-[#1F1F1F] mb-2.5 tracking-tight whitespace-nowrap">
+                    โครงการบ้านสวนปภาวรินทร์
+                  </h4>
+
+                  <div class="space-y-1.5 text-[13px] sm:text-sm text-[#444444]">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                      <span>นครปฐม (สามพราน)</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                      </svg>
+                      <span>โครงการบ้านจัดสรรคุณภาพ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-2 pt-3.5 mt-3.5 border-t border-neutral-100 text-xs sm:text-[13px] text-[#737373] leading-relaxed">
+                โครงการบ้านจัดสรรที่พัฒนาแล้วเสร็จ<br>และส่งมอบให้ลูกบ้านเรียบร้อยแล้ว
+              </div>
+            </div>
+
+            <!-- Card 6: โครงการบ้านร่มไม้ปภาวรินทร์ -->
+            <div class="project-card bg-white rounded-2xl p-3 pb-6 flex flex-col justify-between">
+              <div>
+                <div class="rounded-xl overflow-hidden aspect-[4/3] bg-neutral-100 shadow-inner">
+                  <img src="Source/project-rommai.png" alt="โครงการบ้านร่มไม้ปภาวรินทร์" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="px-2 pt-3.5">
+                  <div class="flex flex-wrap gap-1.5 mb-2.5">
+                    <span class="inline-block bg-[#EAF5EB] text-[#2E7D32] text-xs font-medium px-3 py-0.5 rounded-full">
+                      บ้านเดี่ยว
+                    </span>
+                  </div>
+
+                  <h4 class="text-[17px] sm:text-[18px] font-bold text-[#1F1F1F] mb-2.5 tracking-tight whitespace-nowrap">
+                    โครงการบ้านร่มไม้ปภาวรินทร์
+                  </h4>
+
+                  <div class="space-y-1.5 text-[13px] sm:text-sm text-[#444444]">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                      <span>นครปฐม (พุทธมณฑล สาย 5)</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                      </svg>
+                      <span>โครงการบ้านจัดสรรคุณภาพ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-2 pt-3.5 mt-3.5 border-t border-neutral-100 text-xs sm:text-[13px] text-[#737373] leading-relaxed">
+                โครงการบ้านจัดสรรที่พัฒนาแล้วเสร็จ<br>และส่งมอบให้ลูกบ้านเรียบร้อยแล้ว
+              </div>
+            </div>
+
+            <!-- Card 7: โครงการปภาวรินทร์ สวนสามพราน -->
+            <div class="project-card bg-white rounded-2xl p-3 pb-6 flex flex-col justify-between">
+              <div>
+                <div class="rounded-xl overflow-hidden aspect-[4/3] bg-neutral-100 shadow-inner">
+                  <img src="Source/project-sampran.png" alt="โครงการปภาวรินทร์ สวนสามพราน" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <div class="px-2 pt-3.5">
+                  <div class="flex flex-wrap gap-1.5 mb-2.5">
+                    <span class="inline-block bg-[#EAF5EB] text-[#2E7D32] text-xs font-medium px-3 py-0.5 rounded-full">
+                      บ้านเดี่ยว
+                    </span>
+                  </div>
+
+                  <h4 class="text-[17px] sm:text-[18px] font-bold text-[#1F1F1F] mb-2.5 tracking-tight whitespace-nowrap">
+                    โครงการปภาวรินทร์ สวนสามพราน
+                  </h4>
+
+                  <div class="space-y-1.5 text-[13px] sm:text-sm text-[#444444]">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                      <span>นครปฐม (สวนสามพราน)</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                      </svg>
+                      <span>โครงการบ้านจัดสรรคุณภาพ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-2 pt-3.5 mt-3.5 border-t border-neutral-100 text-xs sm:text-[13px] text-[#737373] leading-relaxed">
+                โครงการบ้านจัดสรรที่พัฒนาแล้วเสร็จ<br>และส่งมอบให้ลูกบ้านเรียบร้อยแล้ว
+              </div>
+            </div>
+
+            <!-- Card 8: Nursing Home (โครงการในอนาคต) -->
+            <div class="project-card bg-white rounded-2xl p-3 pb-6 flex flex-col justify-between border-2 border-emerald-600/20">
+              <div>
+                <div class="rounded-xl overflow-hidden aspect-[4/3] bg-neutral-100 shadow-inner relative">
+                  <img src="Source/project-nursinghome.jpg" alt="Nursing Home – โครงการในอนาคต" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                  <div class="absolute top-2 right-2 bg-[#354738]/90 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-md backdrop-blur-sm shadow">
+                    Coming Soon
+                  </div>
+                </div>
+
+                <div class="px-2 pt-3.5">
+                  <div class="flex flex-wrap gap-1.5 mb-2.5">
+                    <span class="inline-block bg-[#FEF3C7] text-[#92400E] text-xs font-semibold px-3 py-0.5 rounded-full">
+                      โครงการในอนาคต
+                    </span>
+                    <span class="inline-block bg-[#EAF5EB] text-[#2E7D32] text-xs font-medium px-3 py-0.5 rounded-full">
+                      ศูนย์ดูแลสุขภาพ
+                    </span>
+                  </div>
+
+                  <h4 class="text-[17px] sm:text-[18px] font-bold text-[#1F1F1F] mb-2.5 tracking-tight whitespace-nowrap">
+                    Nursing Home ปภาวรินทร์
+                  </h4>
+
+                  <div class="space-y-1.5 text-[13px] sm:text-sm text-[#444444]">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                      <span>กรุงเทพฯ - ปริมณฑล</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#444444] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                      </svg>
+                      <span>ศูนย์ดูแลและฟื้นฟูสุขภาพ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-2 pt-3.5 mt-3.5 border-t border-neutral-100 text-xs sm:text-[13px] text-[#737373] leading-relaxed">
+                โครงการศูนย์สุขภาพสำหรับผู้สูงอายุ<br>มุ่งเน้นการดูแลอย่างยั่งยืนในอนาคต
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Pagination Indicator Dots & Quick Jump -->
+      <div class="flex items-center justify-center gap-3 mt-8">
+        <button onclick="goToProjectSlide(0)" id="carousel-dot-0" 
+                class="h-3 w-8 rounded-full bg-[#404E3F] transition-all cursor-pointer shadow-sm" 
+                aria-label="โครงการ 1 ถึง 4"></button>
+        <button onclick="goToProjectSlide(1)" id="carousel-dot-1" 
+                class="h-3 w-3 rounded-full bg-[#D6CEBC] hover:bg-[#b8ae98] transition-all cursor-pointer" 
+                aria-label="โครงการ 5 ถึง 8"></button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECTION: OUR VISION ================= -->
+  <!-- Left photo pulled directly from Source/2.png, Right script & leaves from Source/3.png -->
+  <section id="vision" class="relative w-full bg-[#FAF9F2] overflow-hidden">
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+      
+      <!-- Left: Clubhouse & Garden Photo from Source/2.png -->
+      <div class="relative w-full h-[380px] sm:h-[480px] lg:h-[500px] overflow-hidden">
+        <img src="Source/2.png" alt="อนาคตของการพัฒนา" class="w-full h-full object-cover object-center">
+      </div>
+
+      <!-- Right: Vision Content with Source/3.png Decorative Graphic -->
+      <div class="relative px-8 sm:px-14 lg:px-16 xl:px-20 py-14 lg:py-16 flex flex-col justify-center min-h-[480px]">
+        
+        <!-- Background decorative script & watercolor leaves from Source/3.png with multiply blending -->
+        <div class="absolute right-0 bottom-0 top-0 w-48 sm:w-64 md:w-80 pointer-events-none select-none opacity-90 hidden sm:block mix-blend-multiply">
+          <img src="Source/3.png" alt="Building Better Living" class="w-full h-full object-contain object-right-bottom">
+        </div>
+
+        <div class="relative z-10 max-w-lg">
+          <span class="text-xs sm:text-sm font-semibold tracking-[0.2em] text-[#5C6E58] uppercase block mb-1">
+            OUR VISION
+          </span>
+          <h2 class="text-3xl sm:text-4xl xl:text-[42px] font-bold text-[#2D4530] leading-tight mb-5">
+            อนาคตของการพัฒนา
+          </h2>
+          <p class="text-[#2F2F2F] text-base sm:text-lg leading-relaxed font-normal">
+            เรายังคงมุ่งมั่นพัฒนาโครงการที่อยู่อาศัย<br>
+            เพื่อสร้างคุณภาพชีวิตที่ดีขึ้นให้กับทุกครอบครัว<br>
+            ควบคู่ไปกับการดูแลสิ่งแวดล้อมอย่างยั่งยืน
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER (MATCHING MAIN SITE) ================= -->
+  <footer class="relative bg-[#231F20] text-neutral-300 pt-16 pb-12 overflow-hidden">
+    
+    <!-- Watermark Background Clean Emblem -->
+    <div class="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none select-none opacity-40">
+      <img src="assets/footer-watermark-clean.jpg" alt="Watermark" class="w-full h-full object-cover object-right">
+    </div>
+
+    <!-- Main Footer Content Grid -->
+    <div class="relative z-10 max-w-[1600px] mx-auto px-6 sm:px-12 lg:px-20">
+      
+      <!-- Footer Logo -->
+      <div class="mb-8">
+        <a href="https://pabhawarinhome.com/" class="inline-block">
+          <img src="assets/flogo.png" alt="ปภาวรินท์ กาญจนาฯ-บางใหญ่" class="w-60 h-auto">
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16">
+        
+        <!-- Column 1: Project Address Info (Span 5) -->
+        <div class="md:col-span-5 pr-0 lg:pr-8">
+          <h4 class="text-lg font-semibold mb-3 text-[#F9F2E0]">
+            ติดต่อทางโครงการ
+          </h4>
+          <p class="text-[#F9F2E0] text-sm sm:text-base leading-relaxed mb-4">
+            ปภาวรินท์ (กาญจนาภิเษก – บางใหญ่)<br>
+            99 หมู่ 4 ซอยบางใหญ่-บางคูลัด (ซอยกันตนา)<br>
+            ต.บางใหญ่ อ.บางใหญ่ จ.นนทบุรี 11140
+          </p>
+
+          <div class="space-y-1 text-sm text-[#F9F2E0]">
+            <p>Line ID: <a href="https://line.me/R/ti/p/@544wdfkf?ts=12201711&oat_content=url" target="_blank" rel="noopener noreferrer" class="hover:underline">@pabhawarin</a></p>
+            <p>Email: <a href="mailto:pabhawarinhome@gmail.com" class="hover:underline">pabhawarinhome@gmail.com</a></p>
+          </div>
+        </div>
+
+        <!-- Column 2: Links (Span 3) -->
+        <div class="md:col-span-3">
+          <h4 class="text-lg font-semibold mb-3 text-[#F9F2E0]">
+            เกี่ยวกับเรา
+          </h4>
+          <ul class="space-y-2 text-sm text-[#F9F2E0]">
+            <li><a href="https://pabhawarinhome.com/policy/blog.php" class="hover:underline">Blog</a></li>
+            <li><a href="https://pabhawarinhome.com/policy/term.php" class="hover:underline">Term of Service</a></li>
+            <li><a href="https://pabhawarinhome.com/policy/privacy.php" class="hover:underline">Privacy Policy</a></li>
+            <li><a href="https://pabhawarinhome.com/policy/contact.php" class="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Social Channels & Hotline (Span 4) -->
+        <div class="md:col-span-4 flex flex-col justify-start">
+          <h4 class="text-lg font-semibold mb-3 text-[#F9F2E0]">
+            ช่องทางของเรา
+          </h4>
+
+          <!-- Social Icon Grid (2 rows x 3 columns) using Main Site Icons -->
+          <div class="grid grid-cols-3 gap-3 max-w-[210px] mb-6">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=61560346362945" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition hover:scale-105" title="Facebook">
+              <img src="assets/ffacebook.png" alt="Facebook" class="w-12 h-12 object-contain">
+            </a>
+            <!-- X -->
+            <a href="#" class="hover:opacity-80 transition hover:scale-105" title="X (Twitter)">
+              <img src="assets/fx.png" alt="X" class="w-12 h-12 object-contain">
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/pabha_warin/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition hover:scale-105" title="Instagram">
+              <img src="assets/finta.png" alt="Instagram" class="w-12 h-12 object-contain">
+            </a>
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@marketingpabhawarin" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition hover:scale-105" title="TikTok">
+              <img src="assets/ftiktok.png" alt="TikTok" class="w-12 h-12 object-contain">
+            </a>
+            <!-- LINE -->
+            <a href="https://line.me/R/ti/p/@544wdfkf?ts=12201711&oat_content=url" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition hover:scale-105" title="LINE">
+              <img src="assets/fline.png" alt="LINE" class="w-12 h-12 object-contain">
+            </a>
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@pabhawarinhomeofficial" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition hover:scale-105" title="YouTube">
+              <img src="assets/fyoutube.png" alt="YouTube" class="w-12 h-12 object-contain">
+            </a>
+          </div>
+
+          <!-- Sales Contact Phone Graphic from Main Site -->
+          <div>
+            <a href="tel:0987654321" class="inline-block hover:opacity-90 transition">
+              <img src="assets/fphone.png" alt="ติดต่อฝ่ายขาย" class="h-[68px] w-[230px] object-contain">
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= COPYRIGHT BOTTOM BAR ================= -->
+  <div class="bg-[#404E3F] border-t border-gray-700 text-[#F9F2E0] text-center py-4 px-4 text-sm font-normal">
+    Copyright © 2025 Webpark. All rights reserved.
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="js/main.js"></script>
+</body>
+</html>

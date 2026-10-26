@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Base & Font Faces
+   ========================================================================== */
+
+/* DB Helvethaica X - Medium / 57 Condensed */
+@font-face {
+  font-family: 'DB Helvethaica X';
+  src: local('DB Helvethaica X 57 Condensed'),
+       local('DB Helvethaica X 57 Cond'),
+       local('DB Helvethaica X Cond'),
+       url('../assets/fonts/DB-Helvethaica-X-57-Cond.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* DB Helvethaica X - 55 Regular */
+@font-face {
+  font-family: 'DB Helvethaica X';
+  src: local('DB Helvethaica X 55 Regular'),
+       local('DB Helvethaica X'),
+       url('../assets/fonts/DB-Helvethaica-X-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* DB Helvethaica X - 77 Bold Condensed */
+@font-face {
+  font-family: 'DB Helvethaica X';
+  src: local('DB Helvethaica X 77 Bold Condensed'),
+       local('DB Helvethaica X 77 BdCond'),
+       local('DB Helvethaica X 77 Bd Cond'),
+       local('DB Helvethaica X Cond Bold'),
+       url('../assets/fonts/DB-Helvethaica-X-57-Cond.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* DB HelvethaicaMon X - 75 Bold */
+@font-face {
+  font-family: 'DB Helvethaica X';
+  src: local('DB HelvethaicaMon X 75 Bd'),
+       local('DB Helvethaica X 75 Bold'),
+       local('DB Helvethaica X Bd'),
+       url('../assets/fonts/DB-Helvethaica-X-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* DB Helvethaica X Cond - 77 Bold Condensed */
+@font-face {
+  font-family: 'DB Helvethaica X Cond';
+  src: local('DB Helvethaica X 77 Bold Condensed'),
+       local('DB Helvethaica X 77 BdCond'),
+       local('DB Helvethaica X 77 Bd Cond'),
+       url('../assets/fonts/DB-Helvethaica-X-57-Cond.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* DB Helvethaica X Cond - 57 Condensed */
+@font-face {
+  font-family: 'DB Helvethaica X Cond';
+  src: local('DB Helvethaica X 57 Condensed'),
+       local('DB Helvethaica X 57 Cond'),
+       url('../assets/fonts/DB-Helvethaica-X-57-Cond.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DB Helvethaica X Cond';
+  src: local('DB Helvethaica X 57 Condensed'),
+       local('DB Helvethaica X 57 Cond'),
+       url('../assets/fonts/DB-Helvethaica-X-57-Cond.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Typography: 77 BdCond Style Matching Figma */
+.font-77-bdcond {
+  font-family: 'DB Helvethaica X 77 BdCond', 'DB Helvethaica X Cond', 'DB Helvethaica X', sans-serif;
+  font-weight: 700;
+  -webkit-text-stroke: 0.35px currentColor;
+  paint-order: stroke fill;
+  letter-spacing: 0;
+}
+
+.font-cond {
+  font-family: 'DB Helvethaica X Cond', 'DB Helvethaica X 57 Cond', 'DB Helvethaica X', sans-serif;
+  letter-spacing: 0;
+}
+
+/* Active Nav Link (77 BdCond, Fill: #231F20, 2px indicator bar) */
+.nav-link-active {
+  position: relative;
+  display: inline-block;
+  font-family: 'DB Helvethaica X 77 BdCond', 'DB Helvethaica X Cond', 'DB Helvethaica X', sans-serif;
+  font-weight: 700;
+  -webkit-text-stroke: 0.35px currentColor;
+  paint-order: stroke fill;
+  color: #231F20;
+  line-height: normal;
+  letter-spacing: 0;
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background-color: #231F20;
+}
+
+/* Body global typography */
+body {
+  font-family: 'DB Helvethaica X', 'DB Helvethaica X Cond', 'Noto Sans Thai', sans-serif;
+  color: #231F20;
+  background-color: #FAF8F2;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+/* ==========================================================================
+   Custom Component Shadows
+   ========================================================================== */
+
+/* Drop shadow for Navigation Bar (0px 4px 4px rgba(0,0,0,0.25)) */
+.nav-shadow {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Project Cards Shadow & Hover Elevation */
+.project-card {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.12), 0 10px 15px -5px rgba(0, 0, 0, 0.06);
+}
