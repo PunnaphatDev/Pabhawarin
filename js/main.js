@@ -153,6 +153,14 @@ document.addEventListener('DOMContentLoaded', () => {
       didSwipeProjectTrack = false;
     }, { passive: true });
 
+    projectTrack.addEventListener('touchmove', (e) => {
+      const diffX = Math.abs(touchStartX - e.changedTouches[0].screenX);
+      const diffY = Math.abs(touchStartY - e.changedTouches[0].screenY);
+      if (diffX > 10 && diffX > diffY) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+
     projectTrack.addEventListener('touchend', (e) => {
       const diffX = touchStartX - e.changedTouches[0].screenX;
       const diffY = touchStartY - e.changedTouches[0].screenY;

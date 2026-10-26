@@ -60,11 +60,23 @@
 }
 
 /* Body global typography */
+html, body {
+  overflow-x: clip;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'DB Helvethaica X', 'Noto Sans Thai', sans-serif;
   color: #231F20;
   background-color: #FAF8F2;
   -webkit-font-smoothing: antialiased;
+}
+
+#project-carousel-track {
+  touch-action: pan-y;
 }
 
 /* ==========================================================================
