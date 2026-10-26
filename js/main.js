@@ -71,22 +71,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Slide transform
     projectTrack.style.transform = `translateX(-${currentProjectSlide * 100}%)`;
 
-    // Update Button states
+    // Update Button states (solid high-visibility colors without transparency bleed)
+    const activeBtnClasses = ['bg-white', 'border-white', 'text-[#11190E]', 'hover:bg-[#FEF3C7]', 'opacity-80', 'hover:opacity-100'];
+    const disabledBtnClasses = ['bg-[#C8C2B4]', 'border-[#C8C2B4]', 'text-[#5A6258]', 'opacity-40', 'pointer-events-none'];
+
     if (prevBtn) {
       prevBtn.disabled = currentProjectSlide === 0;
       if (currentProjectSlide === 0) {
-        prevBtn.classList.add('opacity-30', 'pointer-events-none');
+        prevBtn.classList.remove(...activeBtnClasses);
+        prevBtn.classList.add(...disabledBtnClasses);
       } else {
-        prevBtn.classList.remove('opacity-30', 'pointer-events-none');
+        prevBtn.classList.remove(...disabledBtnClasses);
+        prevBtn.classList.add(...activeBtnClasses);
       }
     }
 
     if (nextBtn) {
       nextBtn.disabled = currentProjectSlide === totalProjectSlides - 1;
       if (currentProjectSlide === totalProjectSlides - 1) {
-        nextBtn.classList.add('opacity-30', 'pointer-events-none');
+        nextBtn.classList.remove(...activeBtnClasses);
+        nextBtn.classList.add(...disabledBtnClasses);
       } else {
-        nextBtn.classList.remove('opacity-30', 'pointer-events-none');
+        nextBtn.classList.remove(...disabledBtnClasses);
+        nextBtn.classList.add(...activeBtnClasses);
       }
     }
 
@@ -347,12 +354,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardTitle = cardTitleEl ? cardTitleEl.textContent.trim() : '';
     const imgSrcList = Array.from(images).map(img => img.getAttribute('src'));
 
-    gallery.classList.add('cursor-pointer');
+    card.classList.add('cursor-pointer');
 
     let currentImgIndex = 0;
     let hoverInterval = null;
 
-    gallery.addEventListener('click', () => {
+    card.addEventListener('click', () => {
       if (didSwipeProjectTrack) {
         didSwipeProjectTrack = false;
         return;
