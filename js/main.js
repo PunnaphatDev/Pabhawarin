@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // Projects Carousel (Mobile: 1 card per slide [8 slides], Desktop: 4 cards per slide [2 slides])
+  // Projects Carousel (Mobile: 1 card per slide [7 slides], Desktop: 4 cards per slide [2 slides])
   // ==========================================================================
   let currentProjectSlide = 0;
   const projectTrack = document.getElementById('project-carousel-track');
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function getTotalProjectSlides() {
-    return isMobileSingleCardMode() ? 8 : 2;
+    return isMobileSingleCardMode() ? 7 : 2;
   }
 
   let lastTotalSlides = 0;
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < totalSlides; i++) {
       const btn = document.createElement('button');
       btn.type = 'button';
-      btn.setAttribute('aria-label', totalSlides === 8 ? `โครงการที่ ${i + 1}` : `หน้า ${i + 1}`);
+      btn.setAttribute('aria-label', isMobileSingleCardMode() ? `โครงการที่ ${i + 1}` : `หน้า ${i + 1}`);
       btn.addEventListener('click', () => goToProjectSlide(i));
       dotsWrapper.appendChild(btn);
     }
